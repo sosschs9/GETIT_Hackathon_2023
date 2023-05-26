@@ -7,12 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    {% for word in word_list %}
-    {{ word['word'] }}
-    {{ word['meaning'] }}
-    {% endfor %}
-
-    <a href="/record_word">단어 추가하기</a>
-
+    <form method="post" action="/record_word">
+        <input name="word" id="word"/>
+        <input name="meaning" id="meaning"/>
+        <button type="submit" value="등록하기"></button>
+    </form>
 </body>
 </html>

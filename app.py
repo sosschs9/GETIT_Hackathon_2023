@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 from src.papago import *
 from src.chatGPT import *
 from src.Word import *
@@ -39,6 +39,27 @@ def chat():
 @app.route('/setting')
 def setting():
     return render_template("setting.html")
+
+# 단어장 페이지
+@app.route('/wordlist', methods=['GET', 'POST'])
+def wordlist():
+    word_list = getAllWord()
+    return render_template('wordlist.html', word_list = word_list)
+
+# 새로운 단어 추가 페이지
+@app.route('/record_word', methods=['GET', 'POST'])
+def record_word():
+    if request.method == 'GET':
+        return render_template('record_word.html')
+    if request.method == 'POST':
+        word = request.form['word']
+        meaning = request.form['meaning']
+        wordIdx = getWordNumber()
+        new_word = Word(wordIdx, word, meaning)
+        DB_addWord(new_word)
+        return redirect('/wordlist')
+
+
 
 if __name__ == '__main__':
     app.run()
