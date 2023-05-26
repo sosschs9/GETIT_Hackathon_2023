@@ -44,6 +44,3 @@ def getAllChat():
         ret.append({'chat':element['_Chat__chatlog'], 'user':element['_Chat__user']})
 
     return ret
-
-n=getchatNumber()
-DB_deleteGpt(n-1)

@@ -1,7 +1,7 @@
 import os
 import openai
 
-openai.api_key = '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'
+openai.api_key = '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'
 
 def getResponse(client_msg:str):
     messages_history = [
