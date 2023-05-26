@@ -4,23 +4,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>네 머릿속 그거</title>
+    <title>What is in your Brain ?</title>
+    <script src="https://kit.fontawesome.com/a935c354f5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./static/css/chat.css"/>
+    <link rel="stylesheet" type="text/css" href='https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+    <link rel="stylesheet" type="text/css" href='https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css'>
+    <link rel="stylesheet" href="../static/css/chat.css"/>
 </head>
-<body>
-    <form method="post" action="/">
-        <textarea name="question" id="question" placeholder="질문 입력 " rows="10"></textarea>
-        <input type="submit" value="질문하기"/>
-    </form>
+<body class = "body">
+    <div class = "menu_up">
+        <b class = "titletext">What is in your brain?</b>
+    </div>
+    <div class ="main">
+        <div class = "chat">
+            
+        </div>
+        <div class = "input">
+            <form>
+                <input type="text" class="input1" size="58" placeholder="    Send a message">
+                <button type="send" class="button1">
+                    <i class="fa-regular fa-paper-plane" style="color: #BBBBBB;"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+    <div class = "menu_down">
+        <div class = "menu_setting">
+            <div class = "icon_setting">
+                <i class="fa-solid fa-gear" style="color: #BBBBBB;"></i>
+            </div>
+            <div class = "text_setting">
+                Setting
+            </div>
+        </div>
+        <div class = "menu_news">
+            <div class = "icon_news">
+                <i class="fa-regular fa-newspaper" style="color: #BBBBBB;"></i>
+            </div>
+            <div class = "text_news">
+                News
+            </div>
+        </div>
+        <div class = "menu_chat">
+            <div class = "icon_chat">
+                <i class="fa-regular fa-message" style="color: #BBBBBB;"></i>
+            </div>
+            <div class = "text_chat">
+                Chat
+            </div>
+        </div>
+        <div class = "menu_voca">
+            <div class = "icon_voca">
+                <i class="fa-solid fa-book" style="color: #BBBBBB;"></i>
+            </div>
+            <div class = "text_voca">
+                Voca
+            </div>
+        </div>
+        <div class = "menu_mypage">
+            <div class = "icon_mypage">
+                <i class="fa-regular fa-user" style="color: #BBBBBB;"></i>
+            </div>
+            <div class = "text_mypage">
+                My Page
+            </div>
+        </div>
 
-    {% for question in question_list %}
-    {{ question }}
-    {% endfor %}
+    </div>
 
-    {% if response %}
-    <div></div>
-    {{response}}
-    {% endif %}
-
-
+    
 </body>
+
+
 </html>
