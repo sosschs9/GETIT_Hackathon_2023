@@ -10,7 +10,6 @@ app = Flask(__name__)
 
 cnt = 0
 client_msg = ""
-question_list = []
 chat_list = []
 
 # 처음 로딩페이지
@@ -40,15 +39,29 @@ def chat():
         elif (cnt == 2):
             DB_addChatLog("그 단어를 사용하는 상황은 무엇인가요?", "GPT")
         elif (cnt == 0):
-            client_msg += " 앞 설명에 부합하는 단어가 뭐야?그리고 답변해줄 때 \"\"<- 이 기호 쓰지말고 그 단어만 얘기해줘"
+            client_msg += " 앞 설명에 부합하는 단어가 뭐야?그리고 답변해줄 때 \"\"<- 이 기호 쓰지말고 단어들만 5개정도 얘기해줘"
             # translate_txt = translate('ko', 'ja', client_msg)
             # translate_txt = translate('ja', 'en', translate_txt)
             gpt_response = getResponse(client_msg) # 사용자 질문 내용을 gpt에게 전달함.
+            gpt_response = getResponse(client_msg)
             DB_addChatLog(gpt_response, "GPT")
             # gpt_response = translate('en', 'ko', gpt_response)
         
         chat_list = getAllChat()
         return render_template("chat.html", chat_list=chat_list)
+
+#채팅 페이지 채팅 아이콘
+@app.route('/delete',methods=['GET','POST'])
+def delete():
+    my_data=request.form['my_data']
+    n=getchatNumber()
+    while n!=1:
+        DB_deleteGpt(n-1)
+        n=getchatNumber()
+    if emptyChat() == True:
+        DB_addChatLog("안녕하세요! 궁금한 단어에 대해 입력해주세요", "GPT")
+    chat_list = getAllChat()
+    return render_template("chat.html", chat_list=chat_list)
 
 # 단어장 페이지
 @app.route('/wordlist', methods=['GET', 'POST'])

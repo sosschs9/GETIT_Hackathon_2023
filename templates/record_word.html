@@ -36,65 +36,70 @@
           <span class="writedown">
             <span>Please enter what you want to record</span>
           </span>
-          <form action="" method="get" class="sav">
-                <div class="sav">
-                <input type="submit" class="button_save" value="Save">
-              </div>
-            </form>
-          <div class="insiderecord">
-            <form action="" method="get" class="defin"></form>
+
+          <form action="/record_word" method="post">
+            <div class="sav">
+              <input type="submit" class="button_save" value="Save">
+            </div>
+            <div class="insiderecord">
               <div class="defin">
                 <label for="text">Definition </label>
-                <textarea cols="50" rows="10" class="button_def"></textarea>
+                <textarea cols="50" rows="10" name="meaning" class="button_def"></textarea>
               </div>
-          <div class="vocabrecord">
-            <form action="" method="get" class="vocabu"></form>
-              <div class="vocabu">
-                <label for="text">Vocabulary </label>
-                <input type="text" class="button_voc" required />
-              </div>
-          </div>
-          <div class = "menu_down">
-            <div class = "menu_setting">
-                <div class = "icon_setting">
-                    <a href="/setting"><i class="fa-solid fa-gear" style="color: #BBBBBB;"></i></a>
-                </div>
-                <div class = "text_setting">
-                    Setting
+            </div>
+            <div class="vocabrecord">
+                <div class="vocabu">
+                  <label for="text">Vocabulary </label>
+                  <input type="text" name="word" class="button_voc" required />
                 </div>
             </div>
-            <div class = "menu_news">
-                <div class = "icon_news">
-                    <a href="/news"><i class="fa-regular fa-newspaper" style="color: #BBBBBB;"></i></a>
-                </div>
-                <div class = "text_news">
-                    News
-                </div>
-            </div>
-            <div class = "menu_chat">
-                <div class = "icon_chat">
-                    <a href="/chat"><i class="fa-regular fa-message" style="color: #BBBBBB;"></i></a>
-                </div>
-                <div class = "text_chat">
-                    Chat
-                </div>
-            </div>
-            <div class = "menu_voca">
-                <div class = "icon_voca">
-                    <a href="/wordlist"><i class="fa-solid fa-book" style="color: #BBBBBB;"></i></a>
-                </div>
-                <div class = "text_voca">
-                    Voca
-                </div>
-            </div>
-            <div class = "menu_mypage">
-                <div class = "icon_mypage">
-                    <a href="/"><i class="fa-regular fa-user" style="color: #BBBBBB;"></i></a>
-                </div>
-                <div class = "text_mypage">
-                    My Page
-                </div>
-            </div>
+          </form>
+
         </div>
+      </div>
+    </div>
+
+    <div class = "menu_down">
+      <div class = "menu_setting">
+          <div class = "icon_setting">
+              <a href="/setting"><i class="fa-solid fa-gear" style="color: #BBBBBB;"></i></a>
+          </div>
+          <div class = "text_setting">
+              Setting
+          </div>
+      </div>
+      <div class = "menu_news">
+          <div class = "icon_news">
+              <a href="/news"><i class="fa-regular fa-newspaper" style="color: #BBBBBB;"></i></a>
+          </div>
+          <div class = "text_news">
+              News
+          </div>
+      </div>
+      <div class = "menu_chat">
+          <div class = "icon_chat">
+              <a href="/chat"><i class="fa-regular fa-message" style="color: #BBBBBB;"></i></a>
+          </div>
+          <div class = "text_chat">
+              Chat
+          </div>
+      </div>
+      <div class = "menu_voca">
+          <div class = "icon_voca">
+              <a href="/wordlist"><i class="fa-solid fa-book" style="color: #BBBBBB;"></i></a>
+          </div>
+          <div class = "text_voca">
+              Voca
+          </div>
+      </div>
+      <div class = "menu_mypage">
+          <div class = "icon_mypage">
+              <a href="/"><i class="fa-regular fa-user" style="color: #BBBBBB;"></i></a>
+          </div>
+          <div class = "text_mypage">
+              My Page
+          </div>
+      </div>
+  </div>
   </body>
 </html>
