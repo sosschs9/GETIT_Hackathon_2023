@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What is in your Brain ?</title>
     <script src="https://kit.fontawesome.com/a935c354f5.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./static/css/chat.css"/>
+    <link rel="stylesheet" href="../static/css/chat.css"/>
     <link rel="stylesheet" type="text/css" href='https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
     <link rel="stylesheet" type="text/css" href='https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css'>
-    <link rel="stylesheet" href="../static/css/chat.css"/>
+
 </head>
 <body class = "body">
     <div class = "menu_up">
@@ -18,24 +18,41 @@
     </div>
     <div class ="main">
         <div class = "chat">
-            {% for question in question_list %}
-            {{ question }}
-            {% endfor %}
-            {% if response %}
-            {{response}}
+            {% for element in chat_list %}
+
+            {% if element['user'] == 'GPT' %}
+            <div class = "text" id="gpt">
+                <div class = "gpt_icon">
+                    <img class="logo" src="../static/img/logo_png.png" alt="ChatGPT logo" style="width:30px; height:30px;"/>
+                </div>
+                <div class="gpt_text">
+                    <p>{{ element['chat'] }}</p>
+                </div>
+            </div>
             {% endif %}
+
+            {% if element['user'] == 'USER' %}
+            <div class = "text" id="client">
+                <div class = "client_icon">
+                    <i class="fa-regular fa-user" style="color: #3BB48E;"></i>
+                </div>
+                <div class="client_text">
+                    <p>{{ element['chat'] }}</p>
+                </div>
+            </div>
+            {% endif %}
+
+            {% endfor %}
         </div>
         <div class = "input">
-            <form method="post" action="/">
-                <input type="text" name="input1" class="input1" size="58" placeholder="    Send a message">
-                <button type="send" class="button1">
+            <form method="post" action="/chat">
+                <input type="text" name="user_input" class="input1" size="58" placeholder="    Send a message">
+                <button type="submit" class="button1">
                     <i class="fa-regular fa-paper-plane" style="color: #BBBBBB;"></i>
                 </button>
             </form>
-            
         </div>
     </div>
-    
     <div class = "menu_down">
         <div class = "menu_setting">
             <div class = "icon_setting">
@@ -77,6 +94,6 @@
                 My Page
             </div>
         </div>
-    </div>    
+    </div>
 </body>
 </html>

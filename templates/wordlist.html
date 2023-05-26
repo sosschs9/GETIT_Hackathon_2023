@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/a935c354f5.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./static/css/chat.css"/>
+    <link rel="stylesheet" href="../static/css/chat.css"/>
     <link rel="stylesheet" type="text/css" href='https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
     <link rel="stylesheet" type="text/css" href='https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css'>
@@ -19,61 +19,63 @@
         <div class = "card">
             <div class="add_word">
                 <div class ="plus">
-                    <a href="/record_word"><i class="fa-solid fa-plus" style="color: #676767;"></i></a>
+                    <i class="fa-solid fa-plus" style="color: #676767;"></i>
                 </div>
             </div>
+            {% for element in word_list %}
             <div class = "word1">
                 <div class = "word1_text">
-                    Good
+                    {{ element['word'] }}
                 </div>
                 <div class = "word1_mean">
-                    좋은 건 좋은 것이다.
+                    {{ element['meaning'] }}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class = "menu_down">
+        <div class = "menu_down">
+            <div class = "menu_setting">
+                <div class = "icon_setting">
+                    <a href="/setting"><i class="fa-solid fa-gear" style="color: #BBBBBB;"></i></a>
+                </div>
+                <div class = "text_setting">
+                    Setting
+                </div>
+            </div>
+            <div class = "menu_news">
+                <div class = "icon_news">
+                    <a href="/news"><i class="fa-regular fa-newspaper" style="color: #BBBBBB;"></i></a>
+                </div>
+                <div class = "text_news">
+                    News
+                </div>
+            </div>
+            <div class = "menu_chat">
+                <div class = "icon_chat">
+                    <a href="/chat"><i class="fa-regular fa-message" style="color: #BBBBBB;"></i></a>
+                </div>
+                <div class = "text_chat">
+                    Chat
+                </div>
+            </div>
+            <div class = "menu_voca">
+                <div class = "icon_voca">
+                    <a href="/wordlist"><i class="fa-solid fa-book" style="color: #BBBBBB;"></i></a>
+                </div>
+                <div class = "text_voca">
+                    Voca
+                </div>
+            </div>
+            <div class = "menu_mypage">
+                <div class = "icon_mypage">
+                    <a href="/"><i class="fa-regular fa-user" style="color: #BBBBBB;"></i></a>
+                </div>
+                <div class = "text_mypage">
+                    My Page
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class = "menu_down">
-        <div class = "menu_setting">
-            <div class = "icon_setting">
-                <a href="/setting"><i class="fa-solid fa-gear" style="color: #BBBBBB;"></i></a>
-            </div>
-            <div class = "text_setting">
-                Setting
-            </div>
-        </div>
-        <div class = "menu_news">
-            <div class = "icon_news">
-                <a href="/news"><i class="fa-regular fa-newspaper" style="color: #BBBBBB;"></i></a>
-            </div>
-            <div class = "text_news">
-                News
-            </div>
-        </div>
-        <div class = "menu_chat">
-            <div class = "icon_chat">
-                <a href="/chat"><i class="fa-regular fa-message" style="color: #BBBBBB;"></i></a>
-            </div>
-            <div class = "text_chat">
-                Chat
-            </div>
-        </div>
-        <div class = "menu_voca">
-            <div class = "icon_voca">
-                <a href="/wordlist"><i class="fa-solid fa-book" style="color: #BBBBBB;"></i></a>
-            </div>
-            <div class = "text_voca">
-                Voca
-            </div>
-        </div>
-        <div class = "menu_mypage">
-            <div class = "icon_mypage">
-                <a href="/"><i class="fa-regular fa-user" style="color: #BBBBBB;"></i></a>
-            </div>
-            <div class = "text_mypage">
-                My Page
-            </div>
-        </div>
-    </div>
 </body>
 </html>

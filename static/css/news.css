@@ -63,7 +63,7 @@
     display:none;
 }
 .news1{
-    border :1px solid #BBBBBB;
+    border :1px solid black;
     position: relative;
     top:10px;
     height: 280px;
@@ -71,6 +71,12 @@
     left: 20px;
     border-radius: 50px;
     box-shadow: 2px 3px 7px 3px #BBBBBB;
+}
+
+img{
+    width:100%;
+    height:100%;
+    border-radius: 50px;
 }
 .news2{
     border :1px solid #BBBBBB;
@@ -102,46 +108,7 @@
     border-radius: 50px;
     box-shadow: 2px 3px 7px 3px #BBBBBB;
 }
-.button1{
-    border : 1px solid #BBBBBB;
-    position:relative;
-    top:220px;
-    width:310px;
-    height: 60px;
-    border-bottom-left-radius : 50px;
-    border-bottom-right-radius : 50px;
-}
-.button2{
-    border : 1px solid #BBBBBB;
-    position:relative;
-    top:220px;
-    width:310px;
-    height: 60px;
-    border-bottom-left-radius : 50px;
-    border-bottom-right-radius : 50px;
-}
-.button3{
-    border : 1px solid #BBBBBB;
-    position:relative;
-    top:220px;
-    width:310px;
-    height: 60px;
-    border-bottom-left-radius : 50px;
-    border-bottom-right-radius : 50px;
-}
-.button4{
-    border : 1px solid #BBBBBB;
-    position:relative;
-    top:220px;
-    width:310px;
-    height: 60px;
-    border-bottom-left-radius : 50px;
-    border-bottom-right-radius : 50px;
-}
-/*button 이벤트처리 -> 나중에 js로 바꾸기*/
-.button1:active{
-    background-color:#BBBBBB;
-}
+
 .menu_setting{
     border: 1px solid black;
     position:fixed;
