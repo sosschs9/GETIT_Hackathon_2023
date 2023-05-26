@@ -12,12 +12,15 @@
         <input type="submit" value="질문하기"/>
     </form>
 
+    {% for question in question_list %}
+    {{ question }}
+    {% endfor %}
+
     {% if response %}
+    <div></div>
     {{response}}
     {% endif %}
 
-    {% if question1 %}
-    form 띄우기
-    {% endif %}
+
 </body>
 </html>
