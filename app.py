@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect
 from src.papago import *
 from src.chatGPT import *
 from src.Word import *
-from src.database import *
+from src.word_data import *
 
 app = Flask(__name__)
 
@@ -10,8 +10,13 @@ cnt = 0
 client_msg = ""
 question_list = []
 
+# 처음 로딩페이지
+@app.route('/')
+def loading():
+    return render_template("loading.html")
+
 # 채팅 페이지
-@app.route('/',  methods=['GET', 'POST'])
+@app.route('/chat',  methods=['GET', 'POST'])
 def chat():
     global cnt, client_msg, question_list
     if request.method == 'GET':
@@ -35,11 +40,6 @@ def chat():
             # gpt_response = translate('en', 'ko', gpt_response)
             return render_template("chat.html", question_list = question_list, response = gpt_response)
 
-# 설정 페이지
-@app.route('/setting')
-def setting():
-    return render_template("setting.html")
-
 # 단어장 페이지
 @app.route('/wordlist', methods=['GET', 'POST'])
 def wordlist():
@@ -58,6 +58,18 @@ def record_word():
         new_word = Word(wordIdx, word, meaning)
         DB_addWord(new_word)
         return redirect('/wordlist')
+
+# 설정 페이지
+@app.route('/setting')
+def setting():
+    return render_template("settings.html")
+
+# 카드뉴스 페이지
+@app.route('/news')
+def news():
+    return render_template("news.html")
+
+
 
 
 

@@ -11,7 +11,6 @@ col_db = db['WordList']
 def getWordNumber():
     res = col_db.find().sort('_Word__wordIdx', -1).limit(1)
     for i in res:
-        print(i)
         return i['_Word__wordIdx'] + 1
     return 1
 
@@ -43,3 +42,4 @@ def getAllWord():
         ret.append({'wordIdx': element['_Word__wordIdx'], 'word':element['_Word__word'], 'meaning':element['_Word__meaning']})
 
     return ret
+
