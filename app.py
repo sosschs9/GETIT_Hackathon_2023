@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from papago import *
+import openai
 
 app = Flask(__name__)
 
@@ -18,7 +19,6 @@ def chat():
 @app.route('/setting')
 def setting():
     return render_template("setting.html")
-
 
 if __name__ == '__main__':
     app.run()
