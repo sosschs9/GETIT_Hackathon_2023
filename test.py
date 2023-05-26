@@ -5,7 +5,7 @@ import json
 from flask import Flask, request, render_template
 
 def Chatgpt_api():
-    openai.api_key = "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"
+    openai.api_key = ""
 
     app = Flask(__name__)
     # CORS(app)
