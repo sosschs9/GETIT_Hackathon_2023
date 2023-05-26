@@ -5,7 +5,7 @@ import json
 from flask import Flask, request, render_template
 
 def Chatgpt_api():
-    openai.api_key = "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"
+    openai.api_key = "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"
 
     app = Flask(__name__)
     # CORS(app)
@@ -34,6 +34,8 @@ def Chatgpt_api():
             gpt_reply = completion.choices[0].message.content
             print(gpt_reply)
             #messages_history.append({"role":"assistant", "content":gpt_reply})
-        #print(messages_history)
+            #print(messages_history)
         
         return gpt_reply
+    
+def requestion():
