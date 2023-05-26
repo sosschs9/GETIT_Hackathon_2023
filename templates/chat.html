@@ -4,9 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>네 머릿속 그거</title>
 </head>
 <body>
-    
+    <form method="post" action="/">
+        <textarea name="question" id="question" placeholder="질문 입력 " rows="10"></textarea>
+        <input type="submit" value="질문하기"/>
+    </form>
+
+    {% if response %}
+    {{response}}
+    {% endif %}
+
+    {% if question1 %}
+    form 띄우기
+    {% endif %}
 </body>
 </html>
