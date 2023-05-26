@@ -17,7 +17,7 @@ def chat():
     if request.method == 'GET':
         return render_template("chat.html")
     if request.method == 'POST':
-        data = request.form['question']
+        data = request.form['input1']
         client_msg += data + ', '
         cnt = (cnt+1) % 3
         if (cnt == 1):

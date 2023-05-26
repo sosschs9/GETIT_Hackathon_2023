@@ -18,15 +18,22 @@
     </div>
     <div class ="main">
         <div class = "chat">
-            
+            {% for question in question_list %}
+            {{ question }}
+            {% endfor %}
+            {% if response %}
+            {{response}}
+            {% endif %}
+        
         </div>
         <div class = "input">
-            <form>
-                <input type="text" class="input1" size="58" placeholder="    Send a message">
+            <form method="post" action="/">
+                <input type="text" name="input1" class="input1" size="58" placeholder="    Send a message">
                 <button type="send" class="button1">
                     <i class="fa-regular fa-paper-plane" style="color: #BBBBBB;"></i>
                 </button>
             </form>
+            
         </div>
     </div>
     <div class = "menu_down">
