@@ -295,15 +295,12 @@ div.sav {
 }
 
 .button_save {
-  position: relative;
+  position: fixed;
+  bottom : 140;
   gap: 8px;
-  top: 680px;
-  left: 15px;
+  left: 23;
   width: 343px;
-  display: flex;
   padding: 15px 8px 16px 8px;
-  position: absolute;
-  align-self: stretch;
   align-items: center;
   flex-shrink: 0;
   border-radius: 6px;

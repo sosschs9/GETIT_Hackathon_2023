@@ -59,7 +59,18 @@ def wordlist():
     word_list = getAllWord()
     return render_template("wordlist.html", word_list=word_list)
 
-
+#채팅 페이지 채팅 아이콘
+@app.route('/delete',methods=['GET','POST'])
+def delete():
+    my_data=request.form['my_data']
+    n=getchatNumber()
+    while n!=1:
+        DB_deleteGpt(n-1)
+        n=getchatNumber()
+    if emptyChat() == True:
+        DB_addChatLog("안녕하세요! 궁금한 단어에 대해 입력해주세요", "GPT")
+    chat_list = getAllChat()
+    return render_template("chat.html", chat_list=chat_list)
 # 새로운 단어 추가 페이지
 @app.route("/record_word", methods=["GET", "POST"])
 def record_word():

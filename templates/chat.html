@@ -70,14 +70,20 @@
                 News
             </div>
         </div>
-        <div class = "menu_chat">
-            <div class = "icon_chat">
-                <a href="/chat"><i class="fa-regular fa-message" style="color: #BBBBBB;"></i></a>
+        <form action="/delete" method="POST" name="my_data">
+            <div class="menu_chat" onclick="javascript: my_data.action='/delete'">
+                <div class="icon_chat">
+                    <button type="submit" style="background: none; border: none;">
+                        <i class="fa-regular fa-message" style="color: #BBBBBB;"></i>
+                    </button>
+                </div>
+                <input type="hidden" name="my_data" value="my_value">
+                <div class="text_chat">
+                    Chat
+                </div>
             </div>
-            <div class = "text_chat">
-                Chat
-            </div>
-        </div>
+        </form>
+
         <div class = "menu_voca">
             <div class = "icon_voca">
                 <a href="/wordlist"><i class="fa-solid fa-book" style="color: #BBBBBB;"></i></a>

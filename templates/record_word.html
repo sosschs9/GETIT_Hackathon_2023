@@ -18,42 +18,37 @@
 
 <body class="body">
   <div class="main">
-    <div class="iphone14pro1">
-      <span class="arrow"><span></span></span>
       <div class="iphonemetal">
-        <div class="whiterecord"></div>
-        <span class="addwordtxt"><span>Save words</span></span>
-        <div class="text1">
-          Enter the Word
-        </div>
-        <div class="text2">
-          that you want to save !
-        </div>
+        <div class="whiterecord">
 
-        <form action="/record_word" method="post">
-          <div class="sav">
-            <input type="submit" class="button_save" value="Save">
+          <span class="addwordtxt"><span>Save words</span></span>
+          <div class="text1">
+            Enter the Word
           </div>
-          <div class="insiderecord">
-            <div class="word">
-              <div class="word_text">Word</div>
-              <textarea cols="50" rows="10" name="meaning" class="word_def"></textarea>
+          <div class="text2">
+            that you want to save !
+          </div>
+          
+          <form action="/record_word" method="post">
+  
+            <div class="insiderecord">
+              <div class="word">
+                <div class="word_text">Word</div>
+                <textarea cols="50" rows="10" name="word" class="word_def"></textarea>
+              </div>
+              <div class="defin">
+                <div class="def_text">Definition</div>
+                <textarea cols="50" rows="10" name="meaning" class="button_def"></textarea>
+              </div>
             </div>
-            <div class="defin">
-              <div class="def_text">Definition</div>
-              <textarea cols="50" rows="10" name="meaning" class="button_def"></textarea>
-            </div>w
-          </div>
-          <div class="vocabrecord">
-            <div class="vocabu">
-              <label for="text">Vocabulary </label>
-              <input type="text" name="word" class="button_voc" required />
+            
+            <button type="submit" class="button_save">Save</button>
+            <div class="sav">
+              
             </div>
-          </div>
-        </form>
-
+          </form>
+        </div>
       </div>
-    </div>
   </div>
 
   <div class="menu_down">
