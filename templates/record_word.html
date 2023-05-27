@@ -2,104 +2,102 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>News</title>
-    <script
-      src="https://kit.fontawesome.com/a935c354f5.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
-    />
-  </head>
-  <body class="body">
-    <div class="main">
-      <div class="iphone14pro1">
-        <span class="arrow"><span></span></span>
-        <div class="iphonemetal">
-          <div class="whiterecord"></div>
-          <span class="addwordtxt"><span>Save words</span></span>
-          <span class="writedown">
-            <span>Please enter what you want to record</span>
-          </span>
 
-          <form action="/record_word" method="post">
-            <div class="sav">
-              <input type="submit" class="button_save" value="Save">
-            </div>
-            <div class="insiderecord">
-              <div class="defin">
-                <label for="text">Definition </label>
-                <textarea cols="50" rows="10" name="meaning" class="button_def"></textarea>
-              </div>
-            </div>
-            <div class="vocabrecord">
-                <div class="vocabu">
-                  <label for="text">Vocabulary </label>
-                  <input type="text" name="word" class="button_voc" required />
-                </div>
-            </div>
-          </form>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>News</title>
+  <script src="https://kit.fontawesome.com/a935c354f5.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+</head>
 
+<body class="body">
+  <div class="main">
+    <div class="iphone14pro1">
+      <span class="arrow"><span></span></span>
+      <div class="iphonemetal">
+        <div class="whiterecord"></div>
+        <span class="addwordtxt"><span>Save words</span></span>
+        <div class="text1">
+          Enter the Word
         </div>
+        <div class="text2">
+          that you want to save !
+        </div>
+
+        <form action="/record_word" method="post">
+          <div class="sav">
+            <input type="submit" class="button_save" value="Save">
+          </div>
+          <div class="insiderecord">
+            <div class="word">
+              <div class="word_text">Word</div>
+              <textarea cols="50" rows="10" name="meaning" class="word_def"></textarea>
+            </div>
+            <div class="defin">
+              <div class="def_text">Definition</div>
+              <textarea cols="50" rows="10" name="meaning" class="button_def"></textarea>
+            </div>w
+          </div>
+          <div class="vocabrecord">
+            <div class="vocabu">
+              <label for="text">Vocabulary </label>
+              <input type="text" name="word" class="button_voc" required />
+            </div>
+          </div>
+        </form>
+
       </div>
     </div>
-
-    <div class = "menu_down">
-      <div class = "menu_setting">
-          <div class = "icon_setting">
-              <a href="/setting"><i class="fa-solid fa-gear" style="color: #BBBBBB;"></i></a>
-          </div>
-          <div class = "text_setting">
-              Setting
-          </div>
-      </div>
-      <div class = "menu_news">
-          <div class = "icon_news">
-              <a href="/news"><i class="fa-regular fa-newspaper" style="color: #BBBBBB;"></i></a>
-          </div>
-          <div class = "text_news">
-              News
-          </div>
-      </div>
-      <div class = "menu_chat">
-          <div class = "icon_chat">
-              <a href="/chat"><i class="fa-regular fa-message" style="color: #BBBBBB;"></i></a>
-          </div>
-          <div class = "text_chat">
-              Chat
-          </div>
-      </div>
-      <div class = "menu_voca">
-          <div class = "icon_voca">
-              <a href="/wordlist"><i class="fa-solid fa-book" style="color: #BBBBBB;"></i></a>
-          </div>
-          <div class = "text_voca">
-              Voca
-          </div>
-      </div>
-      <div class = "menu_mypage">
-          <div class = "icon_mypage">
-              <a href="/"><i class="fa-regular fa-user" style="color: #BBBBBB;"></i></a>
-          </div>
-          <div class = "text_mypage">
-              My Page
-          </div>
-      </div>
   </div>
-  </body>
+
+  <div class="menu_down">
+    <div class="menu_setting">
+      <div class="icon_setting">
+        <a href="/setting"><i class="fa-solid fa-gear" style="color: #BBBBBB;"></i></a>
+      </div>
+      <div class="text_setting">
+        Setting
+      </div>
+    </div>
+    <div class="menu_news">
+      <div class="icon_news">
+        <a href="/news"><i class="fa-regular fa-newspaper" style="color: #BBBBBB;"></i></a>
+      </div>
+      <div class="text_news">
+        News
+      </div>
+    </div>
+    <div class="menu_chat">
+      <div class="icon_chat">
+        <a href="/chat"><i class="fa-regular fa-message" style="color: #BBBBBB;"></i></a>
+      </div>
+      <div class="text_chat">
+        Chat
+      </div>
+    </div>
+    <div class="menu_voca">
+      <div class="icon_voca">
+        <a href="/wordlist"><i class="fa-solid fa-book" style="color: #BBBBBB;"></i></a>
+      </div>
+      <div class="text_voca">
+        Voca
+      </div>
+    </div>
+    <div class="menu_mypage">
+      <div class="icon_mypage">
+        <a href="/"><i class="fa-regular fa-user" style="color: #BBBBBB;"></i></a>
+      </div>
+      <div class="text_mypage">
+        My Page
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
