@@ -2,7 +2,7 @@
     background-color: #F4F4F4;
 }
 .menu_up{
-    /*border :1px solid black;*/
+
     position: fixed;
     top: 5px;
     width: 374px;
@@ -10,7 +10,7 @@
     text-align: center;
 }
 .main{
-    /*border :1px solid black;*/
+
     position: fixed;
     top: 80px;
     width: 374px;
@@ -20,14 +20,14 @@
     box-shadow: 0px 8px 7px -2px #BBBBBB;
 }
 .menu_down{
-    border :1px solid black;
+
     position: fixed;
     top: 770px;
     width: 374px;
     height : 70px;
 }
 .chat{
-    /*border :1px solid black;*/
+
     position: fixed;
     top:85px;
     height: 600px;
@@ -76,7 +76,7 @@
     color: #3BB48E;
 }
 .menu_setting{
-    border: 1px solid black;
+
     position:fixed;
     width: 50px;
     height:50px;
@@ -84,7 +84,7 @@
     left:20px;
 }
 .icon_setting{
-    /*border: 1px solid black;*/
+
     position: fixed;
     top: 785px;
     left:30px;
@@ -95,7 +95,7 @@
 }
 .text_setting{
     font-family: Pretendard;
-    /*border: 1px solid black;*/
+
     position: fixed;
     top: 815px;
     left:20px;
@@ -106,7 +106,7 @@
     text-align: center;
 }
 .menu_news{
-    border: 1px solid black;
+  
     position: fixed;
     width: 50px;
     height:50px;
@@ -114,7 +114,7 @@
     left: 96px;
 }
 .icon_news{
-    /*border: 1px solid black;*/
+
     position: fixed;
     top: 785px;
     left: 106px;
@@ -125,7 +125,7 @@
 }
 .text_news{
     font-family: Pretendard;
-    /*border: 1px solid black;*/
+
     position: fixed;
     top: 815px;
     left: 96px;
@@ -136,7 +136,7 @@
     text-align: center;
 }
 .menu_chat{
-    border: 1px solid black;
+
     position: fixed;
     width: 50px;
     height:50px;
@@ -144,7 +144,7 @@
     left: 173px;
 }
 .icon_chat{
-    /*border: 1px solid black;*/
+ 
     position: fixed;
     top: 785px;
     left: 183px;
@@ -155,7 +155,7 @@
 }
 .text_chat{
     font-family: Pretendard;
-    /*border: 1px solid black;*/
+
     position: fixed;
     top: 815px;
     left: 173px;
@@ -166,7 +166,7 @@
     text-align: center;
 }
 .menu_voca{
-    border: 1px solid black;
+
     position:fixed;
     width: 50px;
     height:50px;
@@ -174,7 +174,7 @@
     left: 250px;
 }
 .icon_voca{
-    /*border: 1px solid black;*/
+
     position: fixed;
     top: 785px;
     left: 260px;
@@ -185,7 +185,7 @@
 }
 .text_voca{
     font-family: Pretendard;
-    /*border: 1px solid black;*/
+
     position: fixed;
     top: 815px;
     left: 250px;
@@ -196,7 +196,7 @@
     text-align: center;
 }
 .menu_mypage{
-    border: 1px solid black;
+
     position: fixed;
     width: 50px;
     height:50px;
